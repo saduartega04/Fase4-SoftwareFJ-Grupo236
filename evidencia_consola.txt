@@ -1,0 +1,74 @@
+============================================================
+   SOFTWARE FJ - Sistema de clientes, servicios y reservas
+============================================================
+
+[01] Registrar cliente válido (Ana Gómez)
+     ✓ Cliente CLI-001: Ana Gómez | Doc. 1023456789 | ana.gomez@correo.com
+
+[02] Registrar cliente válido (Carlos Ruiz)
+     ✓ Cliente CLI-002: Carlos Ruiz | Doc. 79845612 | carlos.ruiz@correo.com
+
+[03] Registrar cliente con correo inválido
+     ✗ Error controlado: [SFJ-001] El correo 'luisa.correo.com' no es válido
+
+[04] Registrar cliente sin nombre (parámetro faltante)
+     ✗ Error controlado: [SFJ-002] Falta el parámetro obligatorio: 'nombre'
+
+[05] Registrar cliente con documento con letras
+     ✗ Error controlado: [SFJ-001] El documento solo puede contener números
+
+[06] Crear servicio: sala de reuniones
+     ✓ Sala 'Sala Innovación' (12 personas) - $50,000/hora
+
+[07] Crear servicio: alquiler de portátiles
+     ✓ Equipo 'Portátil Lenovo' x3 - $35,000/día
+
+[08] Crear servicio: asesoría avanzada
+     ✓ Asesoría 'Asesoría en Python' (nivel avanzado) - $80,000/hora
+
+[09] Crear servicio con precio negativo
+     ✗ Error controlado: [SFJ-001] El precio base debe ser un número mayor que cero
+
+[10] Crear asesoría con nivel inexistente
+     ✗ Error controlado: [SFJ-001] Nivel 'experto' no válido. Use: basico, avanzado
+
+[11] Reservar sala 3 horas para Ana
+     ✓ Reserva RES-001: Ana Gómez -> Sala Innovación | duración 3 | estado PENDIENTE
+
+[12] Confirmar y procesar reserva de Ana con IVA 19 %
+     ✓ Reserva RES-001 procesada. Total a pagar: $178,500.00
+
+[13] Reservar portátiles 10 días para Carlos
+     ✓ Reserva RES-002: Carlos Ruiz -> Portátil Lenovo | duración 10 | estado PENDIENTE
+
+[14] Confirmar reserva de portátiles de Carlos
+     ✓ Reserva RES-002: Carlos Ruiz -> Portátil Lenovo | duración 10 | estado CONFIRMADA
+
+[15] Ana intenta reservar los portátiles ya ocupados
+     ✗ Error controlado: [SFJ-004] El servicio 'Portátil Lenovo' no está disponible
+
+[16] Reservar la sala por 12 horas (excede el máximo)
+     ✗ Error controlado: [SFJ-005] Duración no válida para Sala Innovación
+       Causa original: [SFJ-001] La sala se reserva entre 1 y 8 horas (se pidió 12)
+
+[17] Reservar con un cliente que no existe
+     ✗ Error controlado: [SFJ-005] La reserva necesita un cliente válido
+
+[18] Procesar portátiles de Carlos con descuento del 150 %
+     ✗ Error controlado: [SFJ-005] No se pudo procesar la reserva RES-002
+       Causa original: [SFJ-006] Descuento fuera de rango: 1.5
+
+[19] Procesar portátiles de Carlos con IVA y 10 % de descuento
+     ✓ Total a pagar: $1,012,095.00
+
+[20] Reservar asesoría 2 horas para Carlos y cancelarla
+     ✓ Reserva RES-004: Carlos Ruiz -> Asesoría en Python | duración 2 | estado CANCELADA
+
+[21] Cancelar otra vez la misma reserva (operación no permitida)
+     ✗ Error controlado: [SFJ-003] No se puede cancelar la reserva RES-004: está CANCELADA
+
+============================================================
+Operaciones exitosas: 11
+Operaciones con error controlado: 10
+El programa terminó sin detenerse. Revise el archivo 'softwarefj.log'.
+============================================================
