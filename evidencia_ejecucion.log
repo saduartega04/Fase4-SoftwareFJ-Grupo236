@@ -1,0 +1,51 @@
+2026-11-22 12:10:44 | INFO    | ===== Inicio de la simulación de Software FJ =====
+2026-11-22 12:10:44 | INFO    | Cliente registrado: Ana Gómez (CLI-001)
+2026-11-22 12:10:44 | INFO    | Operación 01 terminada
+2026-11-22 12:10:44 | INFO    | Cliente registrado: Carlos Ruiz (CLI-002)
+2026-11-22 12:10:44 | INFO    | Operación 02 terminada
+2026-11-22 12:10:44 | ERROR   | Operación 03 fallida (Registrar cliente con correo inválido) -> DatoInvalidoError: [SFJ-001] El correo 'luisa.correo.com' no es válido
+2026-11-22 12:10:44 | INFO    | Operación 03 terminada
+2026-11-22 12:10:44 | ERROR   | Operación 04 fallida (Registrar cliente sin nombre (parámetro faltante)) -> ParametroFaltanteError: [SFJ-002] Falta el parámetro obligatorio: 'nombre'
+2026-11-22 12:10:44 | INFO    | Operación 04 terminada
+2026-11-22 12:10:44 | ERROR   | Operación 05 fallida (Registrar cliente con documento con letras) -> DatoInvalidoError: [SFJ-001] El documento solo puede contener números
+2026-11-22 12:10:44 | INFO    | Operación 05 terminada
+2026-11-22 12:10:44 | INFO    | Servicio creado: Sala 'Sala Innovación' (12 personas) - $50,000/hora
+2026-11-22 12:10:44 | INFO    | Operación 06 terminada
+2026-11-22 12:10:44 | INFO    | Servicio creado: Equipo 'Portátil Lenovo' x3 - $35,000/día
+2026-11-22 12:10:44 | INFO    | Operación 07 terminada
+2026-11-22 12:10:44 | INFO    | Servicio creado: Asesoría 'Asesoría en Python' (nivel avanzado) - $80,000/hora
+2026-11-22 12:10:44 | INFO    | Operación 08 terminada
+2026-11-22 12:10:44 | ERROR   | Operación 09 fallida (Crear servicio con precio negativo) -> DatoInvalidoError: [SFJ-001] El precio base debe ser un número mayor que cero
+2026-11-22 12:10:44 | INFO    | Operación 09 terminada
+2026-11-22 12:10:44 | ERROR   | Operación 10 fallida (Crear asesoría con nivel inexistente) -> DatoInvalidoError: [SFJ-001] Nivel 'experto' no válido. Use: basico, avanzado
+2026-11-22 12:10:44 | INFO    | Operación 10 terminada
+2026-11-22 12:10:44 | INFO    | Reserva creada: Reserva RES-001: Ana Gómez -> Sala Innovación | duración 3 | estado PENDIENTE
+2026-11-22 12:10:44 | INFO    | Operación 11 terminada
+2026-11-22 12:10:44 | INFO    | Reserva RES-001 confirmada
+2026-11-22 12:10:44 | INFO    | Reserva RES-001 procesada. Total: $178,500.00
+2026-11-22 12:10:44 | INFO    | Intento de procesamiento de la reserva RES-001 finalizado
+2026-11-22 12:10:44 | INFO    | Operación 12 terminada
+2026-11-22 12:10:44 | INFO    | Reserva creada: Reserva RES-002: Carlos Ruiz -> Portátil Lenovo | duración 10 | estado PENDIENTE
+2026-11-22 12:10:44 | INFO    | Operación 13 terminada
+2026-11-22 12:10:44 | INFO    | Reserva RES-002 confirmada
+2026-11-22 12:10:44 | INFO    | Operación 14 terminada
+2026-11-22 12:10:44 | INFO    | Reserva creada: Reserva RES-003: Ana Gómez -> Portátil Lenovo | duración 2 | estado PENDIENTE
+2026-11-22 12:10:44 | ERROR   | Operación 15 fallida (Ana intenta reservar los portátiles ya ocupados) -> ServicioNoDisponibleError: [SFJ-004] El servicio 'Portátil Lenovo' no está disponible
+2026-11-22 12:10:44 | INFO    | Operación 15 terminada
+2026-11-22 12:10:44 | ERROR   | Operación 16 fallida (Reservar la sala por 12 horas (excede el máximo)) -> ReservaInvalidaError: [SFJ-005] Duración no válida para Sala Innovación | Causa original: DatoInvalidoError: [SFJ-001] La sala se reserva entre 1 y 8 horas (se pidió 12)
+2026-11-22 12:10:44 | INFO    | Operación 16 terminada
+2026-11-22 12:10:44 | ERROR   | Operación 17 fallida (Reservar con un cliente que no existe) -> ReservaInvalidaError: [SFJ-005] La reserva necesita un cliente válido
+2026-11-22 12:10:44 | INFO    | Operación 17 terminada
+2026-11-22 12:10:44 | ERROR   | Fallo al procesar la reserva RES-002 -> CalculoInconsistenteError: [SFJ-006] Descuento fuera de rango: 1.5
+2026-11-22 12:10:44 | INFO    | Intento de procesamiento de la reserva RES-002 finalizado
+2026-11-22 12:10:44 | ERROR   | Operación 18 fallida (Procesar portátiles de Carlos con descuento del 150 %) -> ReservaInvalidaError: [SFJ-005] No se pudo procesar la reserva RES-002 | Causa original: CalculoInconsistenteError: [SFJ-006] Descuento fuera de rango: 1.5
+2026-11-22 12:10:44 | INFO    | Operación 18 terminada
+2026-11-22 12:10:44 | INFO    | Reserva RES-002 procesada. Total: $1,012,095.00
+2026-11-22 12:10:44 | INFO    | Intento de procesamiento de la reserva RES-002 finalizado
+2026-11-22 12:10:44 | INFO    | Operación 19 terminada
+2026-11-22 12:10:44 | INFO    | Reserva creada: Reserva RES-004: Carlos Ruiz -> Asesoría en Python | duración 2 | estado PENDIENTE
+2026-11-22 12:10:44 | INFO    | Reserva RES-004 cancelada
+2026-11-22 12:10:44 | INFO    | Operación 20 terminada
+2026-11-22 12:10:44 | ERROR   | Operación 21 fallida (Cancelar otra vez la misma reserva (operación no permitida)) -> OperacionNoPermitidaError: [SFJ-003] No se puede cancelar la reserva RES-004: está CANCELADA
+2026-11-22 12:10:44 | INFO    | Operación 21 terminada
+2026-11-22 12:10:44 | INFO    | ===== Fin de la simulación: 11 exitosas, 10 fallidas =====
